@@ -43,13 +43,13 @@ header {
 }
 
 .future{
-    transform: translate(0, 50%) rotate(90deg);
+    transform: translate(0, 0) rotate(90deg);
     bottom: 50%;
     left: 0;
 }
 
 .relationship {
-    transform: translate(-10%, -50%) rotate(90deg);
+    transform: translate(-10%, -225%) rotate(90deg);
     font-size: 2em;
 }
 
@@ -142,7 +142,8 @@ img {
     "pg6 pg6 pg6 pg6" minmax(1em, auto)
     "v1 v1 v1 v1" minmax(1em, auto)
     "pg7 pg7 pg7 pg7" minmax(1em, auto)
-    "v2 v2 v2 v2" minmax(1em, auto);
+    "v2 v2 v2 v2" minmax(1em, auto)
+    " .   .   .   .  " minmax(1em, auto);
 
     text-align: center;
 }
