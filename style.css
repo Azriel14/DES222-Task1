@@ -1,0 +1,162 @@
+body {
+    font-family: 'Brandon Grotesque Medium';
+    background-color: #000;
+    margin: 0;
+}
+
+:root {
+    --color1: #E3E3E1;
+    --color2: #931C35;
+    --color3: #78005E;
+}
+
+.main-container {
+    justify-items: center;
+    column-gap: 1.5em;
+    max-width: 72em;
+    margin: auto 2em;
+    display: grid;
+}
+
+header {
+    box-shadow: 0px -90px 60px -50px #000 inset;
+    background-image: url('assets/City.jpg');
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    height: 100vh;
+    display: flex;
+}
+
+.future,
+.relationship {
+    -webkit-text-stroke-color: var(--color3);
+    -webkit-text-stroke-width: 1px;
+    white-space: nowrap;
+    color: var(--color2);
+    overflow: hidden;
+    font-size: 6.5em;
+    margin: 0;
+}
+
+.future{
+    transform: translate(0, 50%) rotate(90deg);
+    bottom: 50%;
+    left: 0;
+}
+
+.relationship {
+    transform: translate(-10%, -50%) rotate(90deg);
+    font-size: 2em;
+}
+
+p {
+    letter-spacing: 2.4px;
+    line-height: 140%;
+    color: var(--color1);
+    font-size: 1em;
+}
+
+span {
+    color: var(--color2);
+}
+
+img {
+    object-fit: cover;
+    width: 296px;
+    height: 269px;
+  }
+
+#pg1 {
+    grid-area: pg1;
+}
+
+#ph1 {
+    grid-area: ph1;
+}
+
+#pg2 {
+    grid-area: pg2;
+}
+
+#ph2 {
+    grid-area: ph2;
+}
+
+#pg3 {
+    grid-area: pg3;
+}
+
+#ph3 {
+    grid-area: ph3;
+}
+
+#pg4 {
+    grid-area: pg4;
+}
+
+#ph4 {
+    grid-area: ph4;
+}
+
+#pg5 {
+    grid-area: pg5;
+}
+
+#ph5 {
+    grid-area: ph5;
+}
+
+#pg6 {
+    grid-area: pg6;
+}
+
+#v1 {
+    grid-area: v1;
+}
+
+#pg7 {
+    grid-area: pg7;
+}
+
+#v2 {
+    grid-area: v2;
+}
+
+/*Mobile*/
+.main-container {
+    grid-template:
+    "pg1 pg1 pg1 pg1" minmax(1em, auto)
+    "ph1 ph1 ph1 ph1" minmax(1em, auto)
+    "pg2 pg2 pg2 pg2" minmax(1em, auto)
+    "ph2 ph2 ph2 ph2" minmax(1em, auto)
+    "pg3 pg3 pg3 pg3" minmax(1em, auto)
+    "ph3 ph3 ph3 ph3" minmax(1em, auto)
+    "pg4 pg4 pg4 pg4" minmax(1em, auto)
+    "ph4 ph4 ph4 ph4" minmax(1em, auto)
+    "pg5 pg5 pg5 pg5" minmax(1em, auto)
+    "ph5 ph5 ph5 ph5" minmax(1em, auto)
+    "pg6 pg6 pg6 pg6" minmax(1em, auto)
+    "v1 v1 v1 v1" minmax(1em, auto)
+    "pg7 pg7 pg7 pg7" minmax(1em, auto)
+    "v2 v2 v2 v2" minmax(1em, auto);
+
+    text-align: center;
+}
+
+/*Tablet*/
+@media (min-width: 50em) {
+    .main-container {
+        grid-template:
+    }
+}
+
+/*Desktop*/
+@media (min-width: 75em) {
+    .main-container {
+        grid-template:
+    }
+}
