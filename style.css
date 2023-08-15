@@ -1,7 +1,13 @@
 body {
     font-family: 'Brandon Grotesque Medium';
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     background-color: #000;
     margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome */
 }
 
 :root {
@@ -13,8 +19,8 @@ body {
 .main-container {
     justify-items: center;
     column-gap: 1.5em;
-    max-width: 72em;
     margin: auto 2em;
+    overflow: auto;
     display: grid;
 }
 
@@ -37,12 +43,16 @@ header {
     -webkit-text-stroke-width: 1px;
     white-space: nowrap;
     color: var(--color2);
+    letter-spacing: 0px;
+    line-height: 100%;
     overflow: hidden;
     font-size: 6.5em;
+    width: 616px;
+    height: auto;
     margin: 0;
 }
 
-.future{
+.future {
     transform: translate(0, 0) rotate(90deg);
     bottom: 50%;
     left: 0;
@@ -50,25 +60,30 @@ header {
 
 .relationship {
     transform: translate(-10%, -225%) rotate(90deg);
-    font-size: 2em;
+    font-size: 2.15em;
 }
 
 p {
+    flex-direction: column;
+    justify-content: center;
     letter-spacing: 2.4px;
-    line-height: 140%;
     color: var(--color1);
-    font-size: 1em;
+    line-height: 140%;
+    font-size: 0.75em;
+    flex-shrink: 0;
+    display: flex;
 }
 
 span {
     color: var(--color2);
+    display: contents;
 }
 
 img {
     object-fit: cover;
+    height: 296px;
     width: 296px;
-    height: 269px;
-  }
+}
 
 #pg1 {
     grid-area: pg1;
@@ -129,21 +144,7 @@ img {
 /*Mobile*/
 .main-container {
     grid-template:
-    "pg1 pg1 pg1 pg1" minmax(1em, auto)
-    "ph1 ph1 ph1 ph1" minmax(1em, auto)
-    "pg2 pg2 pg2 pg2" minmax(1em, auto)
-    "ph2 ph2 ph2 ph2" minmax(1em, auto)
-    "pg3 pg3 pg3 pg3" minmax(1em, auto)
-    "ph3 ph3 ph3 ph3" minmax(1em, auto)
-    "pg4 pg4 pg4 pg4" minmax(1em, auto)
-    "ph4 ph4 ph4 ph4" minmax(1em, auto)
-    "pg5 pg5 pg5 pg5" minmax(1em, auto)
-    "ph5 ph5 ph5 ph5" minmax(1em, auto)
-    "pg6 pg6 pg6 pg6" minmax(1em, auto)
-    "v1 v1 v1 v1" minmax(1em, auto)
-    "pg7 pg7 pg7 pg7" minmax(1em, auto)
-    "v2 v2 v2 v2" minmax(1em, auto)
-    " .   .   .   .  " minmax(1em, auto);
+        "pg1 pg1 pg1 pg1" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "ph1 ph1 ph1 ph1" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "pg2 pg2 pg2 pg2" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "ph2 ph2 ph2 ph2" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "pg3 pg3 pg3 pg3" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "ph3 ph3 ph3 ph3" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "pg4 pg4 pg4 pg4" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "ph4 ph4 ph4 ph4" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "pg5 pg5 pg5 pg5" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "ph5 ph5 ph5 ph5" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "pg6 pg6 pg6 pg6" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "v1 v1 v1 v1" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "pg7 pg7 pg7 pg7" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto) "v2 v2 v2 v2" minmax(1em, auto) " .   .   .   .  " minmax(1em, auto);
 
     text-align: center;
 }
@@ -152,6 +153,39 @@ img {
 @media (min-width: 50em) {
     .main-container {
         grid-template:
+            "pg1 pg1 pg1 pg1 ph1 ph1 ph1 ph1" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "ph2 ph2 ph2 ph2 pg2 pg2 pg2 pg2" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "pg3 pg3 pg3 pg3 ph3 ph3 ph3 ph3" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "pg4 pg4 pg4 pg4 pg4 pg4 pg4 pg4" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "ph4 ph4 ph4 ph4 ph4 ph4 ph4 ph4" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "pg5 pg5 pg5 pg5 pg5 pg5 pg5 pg5" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "ph5 ph5 ph5 ph5 ph5 ph5 ph5 ph5" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "pg6 pg6 pg6 pg6 v1 v1 v1 v1" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto) "v2 v2 v2 v2 pg7 pg7 pg7 pg" minmax(1em, auto) " .   .   .   .   .   .   .   .  " minmax(1em, auto);
+
+        margin: auto 4em;
+    }
+
+    .future {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    .relationship {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    p {
+        font-size: 0.75em;
+        text-align: left;
+        height: 296px;
+        width: 296px;
+    }
+
+    .longpg {
+        text-align: center;
+        width: 616px;
+        height: auto;
+    }
+
+    .longph {
+        width: 616px;
+    }
+
+    iframe {
+        height: 296px;
+        width: 100%;
     }
 }
 
@@ -159,5 +193,45 @@ img {
 @media (min-width: 75em) {
     .main-container {
         grid-template:
+            "pg1 pg1 pg1 pg1 ph1 ph1 ph1 ph1 pg2 pg2 pg2 pg2" minmax(1em, auto) " .   .   .   .   .   .   .   .   .   .   .   .  " minmax(1em, auto) "ph2 ph2 ph2 ph2 pg3 pg3 pg3 pg3 ph3 ph3 ph3 ph3" minmax(1em, auto) " .   .   .   .   .   .   .   .   .   .   .   .  " minmax(1em, auto) "pg4 pg4 pg4 pg4 pg4 pg4 ph4 ph4 ph4 ph4 ph4 ph4" minmax(1em, auto) " .   .   .   .   .   .   .   .   .   .   .   .  " minmax(1em, auto) "ph5 ph5 ph5 ph5 ph5 ph5 pg5 pg5 pg5 pg5 pg5 pg5" minmax(1em, auto) " .   .   .   .   .   .   .   .   .   .   .   .  " minmax(1em, auto) "pg6 pg6 pg6 pg6 pg6 pg6 v1 v1 v1 v1 v1 v1" minmax(1em, auto) " .   .   .   .   .   .   .   .   .   .   .   .  " minmax(1em, auto) "v2 v2 v2 v2 v2 v2 pg7 pg7 pg7 pg7 pg7 pg7" minmax(1em, auto) " .   .   .   .   .   .   .   .   .   .   .   .  " minmax(1em, auto);
+
+        margin: auto 8em;
+    }
+
+    .future {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    .relationship {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    img {
+        height: 379px;
+        width: 379px;
+    }
+
+    p {
+        text-align: left;
+        font-size: 1em;
+        height: 379px;
+        width: 379px;
+    }
+
+    .longpg,
+    .longpg2 {
+        text-align: left;
+        height: 379px;
+        width: 580px;
+    }
+
+    .longph {
+        height: 379px;
+        width: 100%;
+    }
+
+    iframe {
+        height: 379px;
+        width: 100%;
     }
 }
