@@ -1,5 +1,10 @@
+@font-face {
+    font-family: BrandonGrotesqueMedium;
+    src: url(assets/Brandon_med.otf);
+}
+
 body {
-    font-family: 'Brandon Grotesque Medium';
+    font-family: 'BrandonGrotesqueMedium';
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     background-color: #000;
